@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindConnect - Mental Wellness App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mind<span>Connect</span></h1>
+            <p class="tagline">Your daily companion for mental wellness</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#mood" class="active">Mood Tracker</a></li>
+                <li><a href="#meditation">Meditation</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#affirmations">Affirmations</a></li>
+               
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Mood Selector Section -->
+            <section id="mood" class="section">
+                <h2>How are you feeling today?</h2>
+                <div class="mood-container">
+                    <div class="mood-option" data-mood="happy">
+                        <div class="mood-emoji">😄</div>
+                        <p>Happy</p>
+                    </div>
+                    <div class="mood-option" data-mood="sad">
+                        <div class="mood-emoji">😔</div>
+                        <p>Sad</p>
+                    </div>
+                    <div class="mood-option" data-mood="calm">
+                        <div class="mood-emoji">😌</div>
+                        <p>Calm</p>
+                    </div>
+                    <div class="mood-option" data-mood="anxious">
+                        <div class="mood-emoji">😟</div>
+                        <p>Anxious</p>
+                    </div>
+                    <div class="mood-option" data-mood="irritated">
+                        <div class="mood-emoji">😠</div>
+                        <p>Irritated</p>
+                    </div>
+                    <div class="mood-option" data-mood="angry">
+                        <div class="mood-emoji">😡</div>
+                        <p>Angry</p>
+                    </div>
+                </div>
+                <div class="mood-quote">
+                    <p id="mood-quote-text">Select a mood to see a supportive quote...</p>
+                </div>
+                <div class="mood-history">
+                    <h3>Your Mood History</h3>
+                    <div id="mood-history-container"></div>
+                </div>
+            </section>
+
+            <!-- Meditation Timer Section -->
+            <section id="meditation" class="section hidden">
+                <h2>Meditation Timer</h2>
+                <p class="meditation-message">Whether you are angry or sad, do meditation.</p>
+                <div class="meditation-container">
+                    <div class="breathing-circle">
+                        <div class="circle-inner"></div>
+                    </div>
+                    <div class="timer-display">
+                        <span id="minutes">05</span>:<span id="seconds">00</span>
+                    </div>
+                    <div class="timer-controls">
+                        <button class="timer-btn" data-time="5">5 Minutes</button>
+                        <button class="timer-btn" data-time="10">10 Minutes</button>
+                        <button class="timer-btn" data-time="15">15 Minutes</button>
+                    </div>
+                    <button id="start-timer" class="primary-btn">Start Meditation</button>
+                    <button id="stop-timer" class="secondary-btn hidden">End Session</button>
+                </div>
+            </section>
+
+            <!-- Journal Section -->
+            <section id="journal" class="section hidden">
+                <h2>Daily Journal</h2>
+                <p>Express your thoughts and feelings freely.</p>
+                <div class="journal-container">
+                    <div class="journal-entry">
+                        <input type="text" id="journal-title" placeholder="Entry Title...">
+                        <textarea id="journal-content" placeholder="Write your thoughts here..."></textarea>
+                        <div class="journal-actions">
+                            <button id="save-journal" class="primary-btn">Save Entry</button>
+                            <button id="download-journal" class="secondary-btn">Download Entries</button>
+                        </div>
+                    </div>
+                    <div class="journal-history">
+                        <h3>Previous Entries</h3>
+                        <div id="journal-entries-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Affirmations Section -->
+            <section id="affirmations" class="section hidden">
+                <h2>Daily Affirmations</h2>
+                <p>Positive statements to boost your mindset.</p>
+                <div class="affirmation-container">
+                    <div class="affirmation-card">
+                        <p id="affirmation-text">I am enough just as I am.</p>
+                    </div>
+                    <button id="new-affirmation" class="primary-btn">New Affirmation</button>
+                    <button id="copy-affirmation" class="secondary-btn">Copy to Clipboard</button>
+                    <button id="favorite-affirmation" class="secondary-btn">Add to Favorites</button>
+                    <div class="favorite-affirmations">
+                        <h3>Favorite Affirmations</h3>
+                        <div id="favorite-affirmations-container"></div>
+                    </div>
+                </div>
+            </section>
+
+           
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MindConnect - Your Mental Wellness Companion</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
